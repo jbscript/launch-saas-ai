@@ -1,7 +1,6 @@
 "use client";
 
 import { User } from "@/lib/auth";
-import { authClient } from "@/lib/auth-client";
 import { LogOutIcon, ShieldIcon, UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { signOut } from "@/lib/auth-client";
 
 interface UserDropdownProps {
   user: User;
@@ -69,7 +69,7 @@ function SignOutItem() {
   const router = useRouter();
 
   async function handleSignOut() {
-    const { error } = await authClient.signOut();
+    const { error } = await signOut();
     if (error) {
       toast.error(error.message || "Something went wrong");
     } else {
