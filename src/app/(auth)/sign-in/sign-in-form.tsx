@@ -75,21 +75,7 @@ export function SignInForm() {
     }
   }
 
-  async function handleSocialSignIn(provider: "google" | "github") {
-    setError(null);
-    setLoading(true);
 
-    const { error } = await signIn.social({
-      provider,
-      callbackURL: redirect ?? "/dashboard",
-    });
-
-    setLoading(false);
-
-    if (error) {
-      setError(error.message || "Something went wrong");
-    }
-  }
 
   return (
     <Card className="w-full max-w-md">
