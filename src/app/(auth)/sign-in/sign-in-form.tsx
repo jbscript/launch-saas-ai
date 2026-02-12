@@ -1,10 +1,9 @@
 "use client";
-
-import { GitHubIcon } from "@/components/icons/GitHubIcon";
-import { GoogleIcon } from "@/components/icons/GoogleIcon";
+// import { GitHubIcon } from "@/components/icons/GitHubIcon";
+// import { GoogleIcon } from "@/components/icons/GoogleIcon";
+// import { Button } from "@/components/ui/button";
 import { LoadingButton } from "@/components/loading-button";
 import { PasswordInput } from "@/components/password-input";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -172,7 +171,7 @@ export function SignInForm() {
             <LoadingButton type="submit" className="w-full" loading={loading}>
               Login
             </LoadingButton>
-
+            {/* 
             <div className="flex w-full flex-col items-center justify-between gap-2">
               <Button
                 type="button"
@@ -195,7 +194,7 @@ export function SignInForm() {
                 <GitHubIcon />
                 Sign in with Github
               </Button>
-            </div>
+            </div> */}
           </form>
         </Form>
       </CardContent>
